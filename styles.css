@@ -100,10 +100,10 @@ form button:hover {
 }
 
 @keyframes slide {
-  from {
-    transform: translateY(-30);
+  0% {
+    transform: translateY(-30rem);
   }
-  to {
+  100% {
     transform: translateY(0);
   }
 }
@@ -116,4 +116,26 @@ img {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: var(--color-primary);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.slide-up {
+  animation: slide-up ease 0.8s;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50rem);
+  }
 }
